@@ -1,0 +1,23 @@
+{
+  "name": "idle-hero",
+  "version": "0.0.1",
+  "description": "An idle RPG to save the universe",
+  "main": "index.ts",
+  "scripts": {
+    "start": "node index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cryptic-mystic/idle-hero.git"
+  },
+  "author": "John Crowe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cryptic-mystic/idle-hero/issues"
+  },
+  "homepage": "https://github.com/cryptic-mystic/idle-hero#readme",
+  "devDependencies": {
+    "typescript": "^4.5.4"
+  }
+}
