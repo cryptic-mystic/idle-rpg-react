@@ -33,7 +33,20 @@ An idle RPG to save the universe
  - Player can spend money on equipment at a shop. Each equipment has a lvl requirement.
  - Equipment boosts stats but doesn't factor into level.
 
+### Battles
+ - Random encounters, auto turn based battle
+ - Different types of attacks: physical (swords, etc), ranged (bows, guns), special (magic)
+ - Can use items for brief buffs
+
 ### Shops
  - Shops sell armor, weapons, and other character augments.
  - Shops unlock in a similar progression to Areas. Higher character level unlocks access to better shops.
 
+## UI Notes
+
+### Layout for React / Text based interface
+
+ - Column layout: Player Info, Contextual Action Menu, Text Display
+ - Player Info: Health, Experience, Money bars. Stats table / mgmt. Equipment mgmt.
+ - Action Menu: Root - Level selection, Go to Shop; In Level - Walk, Leave, Use Item; In Battle - Use Item
+ - Text Display: Root - Level description; In Level - Status, discoveries; In Battle - Attack turn reports
