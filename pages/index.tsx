@@ -4,11 +4,22 @@ import Head from 'next/head'
 // class PlayerCharacter {}
 
 const FULL_PERCENTAGE = 100
-const Progress = ({ percentage, bgClassName = 'bg-gray-300', innerClassName = 'bg-gray-700' }: { percentage: number, bgClassName?: string, innerClassName?: string }) => {
+const Progress = ({
+  percentage,
+  bgClassName = 'bg-gray-300',
+  innerClassName = 'bg-gray-700',
+}: {
+  percentage: number
+  bgClassName?: string
+  innerClassName?: string
+}) => {
   const transformPercentage = FULL_PERCENTAGE - percentage
   return (
     <div className={`loading-bar w-full ${bgClassName} rounded-md`}>
-      <div className={`loading-bar-inner transform-gpu ${innerClassName} rounded-md`} style={{ transform: `translateX(-${transformPercentage}%)`}}></div>
+      <div
+        className={`loading-bar-inner transform-gpu ${innerClassName} rounded-md`}
+        style={{ transform: `translateX(-${transformPercentage}%)` }}
+      ></div>
     </div>
   )
 }
@@ -34,18 +45,21 @@ export default function Home() {
         Welcome to Idle RPG 🧙‍♂️
       </h1>
 
-      <div className='grid grid-cols-3 gap-x-12'>
+      <div className="grid grid-cols-3 gap-x-12">
         <div>
           Player Stats / Equipment
-
-          <h1 className="text-lg font-bold">
-            Health
-          </h1>
-          <Progress percentage={percentage} bgClassName='bg-rose-300' innerClassName='bg-rose-700' />
-          <h1 className="text-lg font-bold">
-            XP
-          </h1>
-          <Progress percentage={percentage} bgClassName='bg-green-300' innerClassName='bg-green-700' />
+          <h1 className="text-lg font-bold">Health</h1>
+          <Progress
+            percentage={percentage}
+            bgClassName="bg-rose-300"
+            innerClassName="bg-rose-700"
+          />
+          <h1 className="text-lg font-bold">XP</h1>
+          <Progress
+            percentage={percentage}
+            bgClassName="bg-green-300"
+            innerClassName="bg-green-700"
+          />
         </div>
         <div>Action Context Menu</div>
         <div>Textual Display</div>

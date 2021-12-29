@@ -8,11 +8,7 @@
     "sourceMap": true,
     "outDir": "dist",
     "baseUrl": ".",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
@@ -23,11 +19,6 @@
     "isolatedModules": true,
     "jsx": "preserve"
   },
-  "include": [
-    "index.ts",
-    "src/**/*"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["index.ts", "src/**/*"],
+  "exclude": ["node_modules"]
 }
