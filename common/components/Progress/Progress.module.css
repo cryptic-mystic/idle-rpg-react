@@ -1,0 +1,19 @@
+.loadingBar {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  height: 8px;
+  z-index: 0;
+  transition: background-color 0.4s linear 0s;
+}
+
+.loadingBarInner {
+  width: 100%;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  top: 0px;
+  transition: background-color 0.4s linear 0s;
+  transition: transform 0.4s linear 0s;
+  transform-origin: left center;
+}
