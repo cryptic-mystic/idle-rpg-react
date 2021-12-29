@@ -26,8 +26,10 @@ export default function Home() {
 
       <div className="grid grid-cols-3 gap-x-12">
         <div>
-          <h2 className="text-lg text-center font-bold">Player Stats / Equipment</h2>
-          <div className='mb-4'>
+          <h2 className="text-lg text-center font-bold">
+            Player Stats / Equipment
+          </h2>
+          <div className="mb-4">
             <h3 className="text-md font-bold">Health</h3>
             <Progress
               percentage={percentage}
@@ -36,7 +38,7 @@ export default function Home() {
             />
           </div>
 
-          <div className='mb-4'>
+          <div className="mb-4">
             <h3 className="text-md font-bold">XP</h3>
             <Progress
               percentage={percentage}
