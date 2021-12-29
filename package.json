@@ -4,7 +4,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint --fix && prettier --write ."
+    "format": "next lint --fix && prettier --write ."
   },
   "dependencies": {
     "next": "latest",
