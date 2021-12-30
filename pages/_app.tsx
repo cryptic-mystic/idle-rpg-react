@@ -2,6 +2,8 @@ import React from 'react'
 import Head from 'next/head'
 import { AppProps } from 'next/app'
 
+import { PlayerProvider } from '~/context/PlayerContext'
+
 import '../styles/global.css'
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
@@ -10,7 +12,9 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
       <Head>
         <title>🧙‍♂️ Idle RPG</title>
       </Head>
-      <Component {...pageProps} />
+      <PlayerProvider>
+        <Component {...pageProps} />
+      </PlayerProvider>
     </>
   )
 }

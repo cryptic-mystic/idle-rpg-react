@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
 
 import Button from '~/components/Button'
 import PlayerPanel from '~/components/PlayerPanel'
+import PlayerContext from '~/context/PlayerContext'
 
 export default function Home() {
+  const { walkForOneMinute, travelling } = useContext(PlayerContext)
+
   return (
     <div className="container mx-auto py-10 px-10 relative">
       <h1 className="text-3xl text-center font-bold mb-12">
@@ -17,7 +20,9 @@ export default function Home() {
             Action Context Menu
           </h2>
           <div className="flex justify-center">
-            <Button className="w-36">Walk</Button>
+            <Button className="w-36" onClick={walkForOneMinute} disabled={travelling}>
+              Walk
+            </Button>
           </div>
         </div>
         <div>

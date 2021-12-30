@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 
 import Progress from '~/components/Progress'
+import PlayerContext from '~/context/PlayerContext'
 
 const PlayerPanel = () => {
+  const { metersWalked } = useContext(PlayerContext)
   const [percentage, setPercentage] = useState(0)
 
   useEffect(() => {
@@ -38,6 +40,10 @@ const PlayerPanel = () => {
           bgClassName="bg-blue-300"
           innerClassName="bg-blue-700"
         />
+      </div>
+
+      <div className="mb-4">
+        <h3 className="text-md font-bold">Meters Walked: {metersWalked}</h3>
       </div>
     </div>
   )
