@@ -1,23 +1,34 @@
 import React from 'react'
-import Head from 'next/head'
 
+import Button from '~/components/Button'
 import PlayerPanel from '~/components/PlayerPanel'
 
 export default function Home() {
   return (
     <div className="container mx-auto py-10 px-10 relative">
-      <Head>Idle RPG React</Head>
-      <h1 className="text-2xl text-center font-bold underline mb-8">
-        Welcome to Idle RPG 🧙‍♂️
+      <h1 className="text-3xl text-center font-bold mb-12">
+        🧙‍♂️ Welcome to Idle RPG 🧙‍♂️
       </h1>
 
       <div className="grid grid-cols-3 gap-x-12">
         <PlayerPanel />
-        <div>
-          <h2 className="text-lg text-center font-bold">Action Context Menu</h2>
+        <div className="flex flex-col grow-0 align-middle">
+          <h2 className="text-lg text-center font-bold mb-8">
+            Action Context Menu
+          </h2>
+          <div className="flex justify-center">
+            <Button className="w-36">Walk</Button>
+          </div>
         </div>
         <div>
-          <h2 className="text-lg text-center font-bold">Textual Display</h2>
+          <h2 className="text-lg text-center font-bold mb-8">
+            Textual Display
+          </h2>
+          <p>
+            {
+              "You awake naked in a forest. You're able to see a mountain through the trees. TODO Character starts in a mission by walking, discovers a cave to make their first home. From there, home is where they rest in between missions."
+            }
+          </p>
         </div>
       </div>
     </div>

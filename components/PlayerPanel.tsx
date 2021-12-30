@@ -18,7 +18,7 @@ const PlayerPanel = () => {
 
   return (
     <div>
-      <h2 className="text-lg text-center font-bold">
+      <h2 className="text-lg text-center font-bold mb-8">
         {/* TODO Maybe this can be an editable input with the players name */}
         Player Stats / Equipment
       </h2>
