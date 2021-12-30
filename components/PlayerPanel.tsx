@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-import Progress from '~/common/components/Progress'
+import Progress from '~/components/Progress'
 
 const PlayerPanel = () => {
   const [percentage, setPercentage] = useState(0)

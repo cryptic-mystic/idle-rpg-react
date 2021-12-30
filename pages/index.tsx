@@ -1,7 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 
-import PlayerPanel from '~/common/components/PlayerPanel'
+import PlayerPanel from '~/components/PlayerPanel'
 
 export default function Home() {
   return (
