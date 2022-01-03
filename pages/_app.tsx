@@ -13,11 +13,11 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
       <Head>
         <title>🧙‍♂️ Idle RPG</title>
       </Head>
-      <PlayerProvider>
-        <AdventureLogProvider>
+      <AdventureLogProvider>
+        <PlayerProvider>
           <Component {...pageProps} />
-        </AdventureLogProvider>
-      </PlayerProvider>
+        </PlayerProvider>
+      </AdventureLogProvider>
     </>
   )
 }

@@ -32,11 +32,11 @@ export default function Home() {
           </div>
         </div>
         <div>
-          <h2 className="text-lg text-center font-bold mb-8">
-            Textual Display
-          </h2>
+          <h2 className="text-lg text-center font-bold mb-8">Adventure Log</h2>
           {log?.map(({ id, text }) => (
-            <p key={id}>{text}</p>
+            <p key={id} className="mb-4">
+              {text}
+            </p>
           ))}
         </div>
       </div>
