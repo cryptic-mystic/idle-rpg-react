@@ -2,13 +2,13 @@ import React, { PropsWithChildren, useCallback, useState } from 'react'
 
 interface PlayerContext {
   metersWalked: number
-  travelling: boolean,
+  travelling: boolean
   walkForOneMinute?: () => void
 }
 
 const PlayerContext = React.createContext<PlayerContext>({
   metersWalked: 0,
-  travelling: false
+  travelling: false,
 })
 
 export const PlayerProvider = ({ children }: PropsWithChildren<{}>) => {
@@ -29,7 +29,9 @@ export const PlayerProvider = ({ children }: PropsWithChildren<{}>) => {
   }, [])
 
   return (
-    <PlayerContext.Provider value={{ metersWalked, travelling: walking, walkForOneMinute }}>
+    <PlayerContext.Provider
+      value={{ metersWalked, travelling: walking, walkForOneMinute }}
+    >
       {children}
     </PlayerContext.Provider>
   )

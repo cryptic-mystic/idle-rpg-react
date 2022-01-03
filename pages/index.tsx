@@ -2,10 +2,12 @@ import React, { useContext } from 'react'
 
 import Button from '~/components/Button'
 import PlayerPanel from '~/components/PlayerPanel'
+import AdventureLogContext from '~/context/AdventureLogContext'
 import PlayerContext from '~/context/PlayerContext'
 
 export default function Home() {
   const { walkForOneMinute, travelling } = useContext(PlayerContext)
+  const { log } = useContext(AdventureLogContext)
 
   return (
     <div className="container mx-auto py-10 px-10 relative">
@@ -20,7 +22,11 @@ export default function Home() {
             Action Context Menu
           </h2>
           <div className="flex justify-center">
-            <Button className="w-36" onClick={walkForOneMinute} disabled={travelling}>
+            <Button
+              className="w-36"
+              onClick={walkForOneMinute}
+              disabled={travelling}
+            >
               Walk
             </Button>
           </div>
@@ -29,11 +35,9 @@ export default function Home() {
           <h2 className="text-lg text-center font-bold mb-8">
             Textual Display
           </h2>
-          <p>
-            {
-              "You awake naked in a forest. You're able to see a mountain through the trees. TODO Character starts in a mission by walking, discovers a cave to make their first home. From there, home is where they rest in between missions."
-            }
-          </p>
+          {log?.map(({ id, text }) => (
+            <p key={id}>{text}</p>
+          ))}
         </div>
       </div>
     </div>
