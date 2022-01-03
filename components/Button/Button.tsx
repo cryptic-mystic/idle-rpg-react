@@ -13,7 +13,7 @@ const Button = ({
     className={classNames(
       className,
       'text-slate-900 border border-slate-900 rounded-lg',
-      {'hover:bg-slate-200 active:bg-slate-300': !disabled},
+      { 'hover:bg-slate-200 active:bg-slate-300': !disabled },
       'disabled:text-gray-500 disabled:bg-gray-300 disabled:border-gray-300 disabled:cursor-not-allowed',
       'm-1 px-2 py-1',
       'transition-colors duration-100'

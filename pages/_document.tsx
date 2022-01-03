@@ -11,7 +11,7 @@ class MyDocument extends Document {
             rel="stylesheet"
           />
         </Head>
-        <body className='text-slate-900'>
+        <body className="text-slate-900">
           <Main />
           <NextScript />
         </body>
