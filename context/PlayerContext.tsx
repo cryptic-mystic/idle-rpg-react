@@ -20,7 +20,7 @@ interface PlayerContext {
 const PlayerContext = React.createContext<PlayerContext>({
   metersWalked: 0,
   travelling: false,
-  foundHome: false
+  foundHome: false,
 })
 
 const FIND_HOME_DISTANCE_METERS = genRandomNumber(120, 60)
@@ -55,7 +55,9 @@ export const PlayerProvider = ({ children }: PropsWithChildren<{}>) => {
   useEffect(() => {
     if (metersWalked >= FIND_HOME_DISTANCE_METERS && !foundHome) {
       setFoundHome(true)
-      addAdventureLog("You found a cave that should serve as a decent shelter for a while...")
+      addAdventureLog(
+        'You found a cave that should serve as a decent shelter for a while...'
+      )
     }
   }, [metersWalked, foundHome])
 
